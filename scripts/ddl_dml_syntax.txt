@@ -7,21 +7,21 @@ import uuid
 ########################## File Loading
 url_dataset = "https://ars.els-cdn.com/content/image/1-s2.0-S2352340918315191-mmc2.zip"
 response = requests.get(url_dataset)
-with open('./dataset.zip', "wb") as file:
+with open('./data/dataset.zip', "wb") as file:
     file.write(response.content)
 
 # there are 2 files under the zip file, H1.csv and H2.csv, which represents Resort Hotel and City Hotel respectively
 for file in ['H1.csv', 'H2.csv']:
-    zipfile.ZipFile('./dataset.zip', 'r').extract(file, "./")
+    zipfile.ZipFile('./data/dataset.zip', 'r').extract(file, "./data/")
 
-df_1 = pd.read_csv("./H1.csv")
-df_2 = pd.read_csv("./H2.csv")
+df_1 = pd.read_csv("./data/H1.csv")
+df_2 = pd.read_csv("./data/H2.csv")
 
 # combine datasets & save raw file, adding HotelType column as identifier to separate the source of each files
 df_1['HotelType'] = 'H1'
 df_2['HotelType'] = 'H2'
 df = pd.concat([df_1, df_2], ignore_index=True)
-df.to_csv("./data_raw.csv", index=False)
+df.to_csv("./data/data_raw.csv", index=False)
 
 ########################## Connect to PSQL
 conn = psycopg2.connect(
@@ -76,7 +76,7 @@ conn.commit()
 print("Table created successfully")
 
 ########################## DML
-csv_path = "./P2M3_galuh_alifani_data_raw.csv"
+csv_path = "./data/data_raw.csv"
 with open(csv_path, 'r', encoding='utf-8') as f:
     cursor.copy_expert("""
         COPY table_m3 FROM STDIN WITH CSV HEADER DELIMITER ',';
