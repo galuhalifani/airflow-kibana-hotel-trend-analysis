@@ -1,0 +1,223 @@
+[2025-04-11T17:56:00.943+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.post_to_elasticsearch scheduled__2025-04-05T09:20:00+00:00 [queued]>
+[2025-04-11T17:56:00.993+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.post_to_elasticsearch scheduled__2025-04-05T09:20:00+00:00 [queued]>
+[2025-04-11T17:56:00.995+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-11T17:56:00.998+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-04-11T17:56:00.999+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-11T17:56:01.076+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): post_to_elasticsearch> on 2025-04-05 09:20:00+00:00
+[2025-04-11T17:56:01.098+0000] {standard_task_runner.py:52} INFO - Started process 235 to run task
+[2025-04-11T17:56:01.113+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'M3_GA_pipeline', 'post_to_elasticsearch', 'scheduled__2025-04-05T09:20:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_galuh_alifani_DAG.py', '--cfg-path', '/tmp/tmpfoph_2op', '--error-file', '/tmp/tmpseghbu08']
+[2025-04-11T17:56:01.121+0000] {standard_task_runner.py:80} INFO - Job 14: Subtask post_to_elasticsearch
+[2025-04-11T17:56:01.701+0000] {task_command.py:371} INFO - Running <TaskInstance: M3_GA_pipeline.post_to_elasticsearch scheduled__2025-04-05T09:20:00+00:00 [running]> on host cc0ee192f301
+[2025-04-11T17:56:01.989+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Galuh
+AIRFLOW_CTX_DAG_ID=M3_GA_pipeline
+AIRFLOW_CTX_TASK_ID=post_to_elasticsearch
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T09:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-05T09:20:00+00:00
+[2025-04-11T17:56:28.336+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:1.067s]
+[2025-04-11T17:56:29.171+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.768s]
+[2025-04-11T17:56:30.337+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:1.060s]
+[2025-04-11T17:56:31.023+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.599s]
+[2025-04-11T17:56:31.564+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.466s]
+[2025-04-11T17:56:32.357+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.463s]
+[2025-04-11T17:56:33.129+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.637s]
+[2025-04-11T17:56:33.865+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.651s]
+[2025-04-11T17:56:34.398+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.454s]
+[2025-04-11T17:56:34.945+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.435s]
+[2025-04-11T17:56:35.375+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.336s]
+[2025-04-11T17:56:36.102+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.644s]
+[2025-04-11T17:56:36.493+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.310s]
+[2025-04-11T17:56:37.302+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.692s]
+[2025-04-11T17:56:38.642+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:1.134s]
+[2025-04-11T17:56:39.236+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.438s]
+[2025-04-11T17:56:39.814+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.511s]
+[2025-04-11T17:56:40.273+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.370s]
+[2025-04-11T17:56:41.671+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:1.189s]
+[2025-04-11T17:56:42.559+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.708s]
+[2025-04-11T17:56:43.066+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.384s]
+[2025-04-11T17:56:43.674+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.525s]
+[2025-04-11T17:56:44.008+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.260s]
+[2025-04-11T17:56:44.498+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.406s]
+[2025-04-11T17:56:44.878+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.294s]
+[2025-04-11T17:56:45.275+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.313s]
+[2025-04-11T17:56:45.793+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.420s]
+[2025-04-11T17:56:46.079+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.212s]
+[2025-04-11T17:56:46.387+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.231s]
+[2025-04-11T17:56:46.705+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.230s]
+[2025-04-11T17:56:47.019+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.229s]
+[2025-04-11T17:56:47.370+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.287s]
+[2025-04-11T17:56:47.791+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.339s]
+[2025-04-11T17:56:48.262+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.388s]
+[2025-04-11T17:56:48.575+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.242s]
+[2025-04-11T17:56:48.851+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.192s]
+[2025-04-11T17:56:49.114+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.200s]
+[2025-04-11T17:56:49.726+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.528s]
+[2025-04-11T17:56:50.012+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.226s]
+[2025-04-11T17:56:50.285+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.185s]
+[2025-04-11T17:56:50.684+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.328s]
+[2025-04-11T17:56:50.923+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.176s]
+[2025-04-11T17:56:51.200+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.207s]
+[2025-04-11T17:56:51.862+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.574s]
+[2025-04-11T17:56:52.204+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.274s]
+[2025-04-11T17:56:54.453+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:2.142s]
+[2025-04-11T17:56:55.004+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.389s]
+[2025-04-11T17:56:55.655+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.573s]
+[2025-04-11T17:56:56.019+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.312s]
+[2025-04-11T17:56:56.646+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.564s]
+[2025-04-11T17:56:57.019+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.296s]
+[2025-04-11T17:56:57.441+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.366s]
+[2025-04-11T17:56:57.874+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.361s]
+[2025-04-11T17:56:58.216+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.287s]
+[2025-04-11T17:56:58.630+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.348s]
+[2025-04-11T17:56:59.022+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.334s]
+[2025-04-11T17:56:59.301+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.229s]
+[2025-04-11T17:56:59.610+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.256s]
+[2025-04-11T17:56:59.923+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.264s]
+[2025-04-11T17:57:00.298+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.310s]
+[2025-04-11T17:57:00.612+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.276s]
+[2025-04-11T17:57:01.284+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.568s]
+[2025-04-11T17:57:01.640+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.295s]
+[2025-04-11T17:57:02.011+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.329s]
+[2025-04-11T17:57:02.503+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.400s]
+[2025-04-11T17:57:02.952+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.400s]
+[2025-04-11T17:57:03.624+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.566s]
+[2025-04-11T17:57:03.942+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.260s]
+[2025-04-11T17:57:04.292+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.302s]
+[2025-04-11T17:57:04.600+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.277s]
+[2025-04-11T17:57:05.036+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.377s]
+[2025-04-11T17:57:05.684+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.566s]
+[2025-04-11T17:57:06.128+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.361s]
+[2025-04-11T17:57:06.576+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.397s]
+[2025-04-11T17:57:07.102+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.447s]
+[2025-04-11T17:57:07.533+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.371s]
+[2025-04-11T17:57:08.119+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.442s]
+[2025-04-11T17:57:08.604+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.422s]
+[2025-04-11T17:57:09.058+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.395s]
+[2025-04-11T17:57:09.375+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.271s]
+[2025-04-11T17:57:09.964+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.505s]
+[2025-04-11T17:57:10.405+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.381s]
+[2025-04-11T17:57:10.803+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.337s]
+[2025-04-11T17:57:11.368+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.464s]
+[2025-04-11T17:57:11.921+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.433s]
+[2025-04-11T17:57:12.297+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.323s]
+[2025-04-11T17:57:12.615+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.256s]
+[2025-04-11T17:57:13.148+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.442s]
+[2025-04-11T17:57:13.405+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.228s]
+[2025-04-11T17:57:13.732+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.278s]
+[2025-04-11T17:57:14.057+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.274s]
+[2025-04-11T17:57:14.547+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.423s]
+[2025-04-11T17:57:14.910+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.313s]
+[2025-04-11T17:57:15.424+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.469s]
+[2025-04-11T17:57:15.710+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.205s]
+[2025-04-11T17:57:15.951+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.190s]
+[2025-04-11T17:57:16.330+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.338s]
+[2025-04-11T17:57:16.454+0000] {local_task_job.py:227} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-04-11T17:57:16.463+0000] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 235. PIDs of all processes in the group: [235]
+[2025-04-11T17:57:16.465+0000] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 235
+[2025-04-11T17:57:16.466+0000] {taskinstance.py:1553} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-11T17:57:16.468+0000] {base.py:299} WARNING - POST http://elasticsearch:9200/_bulk [status:N/A request:0.045s]
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 252, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1555, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-04-11T17:57:16.737+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.257s]
+[2025-04-11T17:57:16.895+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.108s]
+[2025-04-11T17:57:17.117+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.187s]
+[2025-04-11T17:57:17.348+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.196s]
+[2025-04-11T17:57:17.580+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.194s]
+[2025-04-11T17:57:18.017+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.397s]
+[2025-04-11T17:57:18.385+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.284s]
+[2025-04-11T17:57:18.712+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.278s]
+[2025-04-11T17:57:18.944+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.204s]
+[2025-04-11T17:57:19.375+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.364s]
+[2025-04-11T17:57:19.620+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.200s]
+[2025-04-11T17:57:19.900+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.245s]
+[2025-04-11T17:57:20.210+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.259s]
+[2025-04-11T17:57:20.582+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.321s]
+[2025-04-11T17:57:20.965+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.344s]
+[2025-04-11T17:57:21.328+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.298s]
+[2025-04-11T17:57:22.354+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.966s]
+[2025-04-11T17:57:23.119+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.564s]
+[2025-04-11T17:57:23.760+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.512s]
+[2025-04-11T17:57:24.274+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.440s]
+[2025-04-11T17:57:25.270+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.922s]
+[2025-04-11T17:57:25.475+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.174s]
+[2025-04-11T17:57:25.686+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.164s]
+[2025-04-11T17:57:26.065+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.343s]
+[2025-04-11T17:57:26.445+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.309s]
+[2025-04-11T17:57:26.812+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.302s]
+[2025-04-11T17:57:27.199+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.329s]
+[2025-04-11T17:57:27.587+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.336s]
+[2025-04-11T17:57:27.972+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.319s]
+[2025-04-11T17:57:28.333+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.308s]
+[2025-04-11T17:57:28.635+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.261s]
+[2025-04-11T17:57:29.040+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.361s]
+[2025-04-11T17:57:29.417+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.286s]
+[2025-04-11T17:57:29.779+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.317s]
+[2025-04-11T17:57:30.222+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.404s]
+[2025-04-11T17:57:30.697+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.374s]
+[2025-04-11T17:57:31.133+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.402s]
+[2025-04-11T17:57:31.599+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.293s]
+[2025-04-11T17:57:31.844+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.206s]
+[2025-04-11T17:57:32.339+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.441s]
+[2025-04-11T17:57:32.633+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.229s]
+[2025-04-11T17:57:32.810+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.129s]
+[2025-04-11T17:57:33.526+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.664s]
+[2025-04-11T17:57:33.739+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.157s]
+[2025-04-11T17:57:33.955+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.167s]
+[2025-04-11T17:57:34.127+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.115s]
+[2025-04-11T17:57:34.341+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.148s]
+[2025-04-11T17:57:34.605+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.187s]
+[2025-04-11T17:57:34.957+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.286s]
+[2025-04-11T17:57:35.238+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.207s]
+[2025-04-11T17:57:35.953+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.646s]
+[2025-04-11T17:57:36.145+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.135s]
+[2025-04-11T17:57:36.275+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.097s]
+[2025-04-11T17:57:36.379+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.065s]
+[2025-04-11T17:57:36.543+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.127s]
+[2025-04-11T17:57:36.671+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.097s]
+[2025-04-11T17:57:36.870+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.147s]
+[2025-04-11T17:57:37.069+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.128s]
+[2025-04-11T17:57:37.208+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.101s]
+[2025-04-11T17:57:37.327+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.076s]
+[2025-04-11T17:57:37.485+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.123s]
+[2025-04-11T17:57:37.817+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.252s]
+[2025-04-11T17:57:38.123+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.246s]
+[2025-04-11T17:57:38.627+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.371s]
+[2025-04-11T17:57:39.039+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.287s]
+[2025-04-11T17:57:39.433+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.317s]
+[2025-04-11T17:57:39.803+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.265s]
+[2025-04-11T17:57:40.149+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.191s]
+[2025-04-11T17:57:40.344+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.147s]
+[2025-04-11T17:57:40.619+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.216s]
+[2025-04-11T17:57:40.837+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.140s]
+[2025-04-11T17:57:41.031+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.143s]
+[2025-04-11T17:57:41.208+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.123s]
+[2025-04-11T17:57:41.378+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.109s]
+[2025-04-11T17:57:41.570+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.149s]
+[2025-04-11T17:57:41.802+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.149s]
+[2025-04-11T17:57:41.909+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.079s]
+[2025-04-11T17:57:41.915+0000] {logging_mixin.py:115} INFO - 86678 documents indexed to Elasticsearch 'table_m3'.
+[2025-04-11T17:57:42.140+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-04-11T17:57:42.222+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=M3_GA_pipeline, task_id=post_to_elasticsearch, execution_date=20250405T092000, start_date=20250411T175600, end_date=20250411T175742
+[2025-04-11T17:57:42.322+0000] {process_utils.py:75} INFO - Process psutil.Process(pid=235, status='terminated', exitcode=0, started='17:56:01') (235) terminated with exit code 0

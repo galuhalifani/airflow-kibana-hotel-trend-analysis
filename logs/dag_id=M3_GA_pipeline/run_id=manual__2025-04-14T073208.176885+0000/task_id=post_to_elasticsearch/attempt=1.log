@@ -1,0 +1,43 @@
+[2025-04-14T07:32:37.915+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.post_to_elasticsearch manual__2025-04-14T07:32:08.176885+00:00 [queued]>
+[2025-04-14T07:32:37.934+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.post_to_elasticsearch manual__2025-04-14T07:32:08.176885+00:00 [queued]>
+[2025-04-14T07:32:37.935+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T07:32:37.936+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-04-14T07:32:37.936+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T07:32:37.967+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): post_to_elasticsearch> on 2025-04-14 07:32:08.176885+00:00
+[2025-04-14T07:32:37.978+0000] {standard_task_runner.py:52} INFO - Started process 1531 to run task
+[2025-04-14T07:32:37.984+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'M3_GA_pipeline', 'post_to_elasticsearch', 'manual__2025-04-14T07:32:08.176885+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_galuh_alifani_DAG.py', '--cfg-path', '/tmp/tmpgqq8zfm8', '--error-file', '/tmp/tmp1jqhkkv2']
+[2025-04-14T07:32:37.987+0000] {standard_task_runner.py:80} INFO - Job 52: Subtask post_to_elasticsearch
+[2025-04-14T07:32:38.217+0000] {task_command.py:371} INFO - Running <TaskInstance: M3_GA_pipeline.post_to_elasticsearch manual__2025-04-14T07:32:08.176885+00:00 [running]> on host b652548eb1f7
+[2025-04-14T07:32:38.451+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Galuh
+AIRFLOW_CTX_DAG_ID=M3_GA_pipeline
+AIRFLOW_CTX_TASK_ID=post_to_elasticsearch
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T07:32:08.176885+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T07:32:08.176885+00:00
+[2025-04-14T07:32:38.460+0000] {base.py:271} INFO - HEAD http://elasticsearch:9200/table_m3 [status:200 request:0.006s]
+[2025-04-14T07:32:38.594+0000] {base.py:271} INFO - DELETE http://elasticsearch:9200/table_m3 [status:200 request:0.134s]
+[2025-04-14T07:32:59.841+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.613s]
+[2025-04-14T07:32:59.844+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/P2M3_galuh_alifani_DAG.py", line 192, in to_elasticsearch
+    success, _ = helpers.bulk(es, actions)
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/helpers/actions.py", line 411, in bulk
+    client, actions, ignore_status=ignore_status, *args, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/helpers/actions.py", line 339, in streaming_bulk
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/helpers/actions.py", line 256, in _process_bulk_chunk
+    for item in gen:
+  File "/home/airflow/.local/lib/python3.7/site-packages/elasticsearch/helpers/actions.py", line 187, in _process_bulk_chunk_success
+    raise BulkIndexError("%i document(s) failed to index." % len(errors), errors)
+elasticsearch.helpers.errors.BulkIndexError: ('1 document(s) failed to index.', [{'index': {'_index': 'table_m3', '_type': '_doc', '_id': '9i83M5YBXIy04TvpOVfg', 'status': 400, 'error': {'type': 'mapper_parsing_exception', 'reason': 'failed to parse', 'caused_by': {'type': 'json_parse_exception', 'reason': 'Non-standard token \'NaN\': enable JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS to allow\n at [Source: (byte[])"DELETE /table_m3 HTTP/1.1\r\nHost: elasticsearch:9200\r\nAccept-Encoding: identity\r\nconnection: keep-alive\r\ncontent-type: application/json\r\nuser-agent: elasticsearch-py/7.13.4 (Python 3.7.13)\r\nx-elastic-client-meta: es=7.13.4,py=3.7.13,t=7.13.4,ur=1.26.11\r\n\r\n-agent: elasticsearch-js/7.13.0-canary.1 (linux 5.10.16.3-microsoft-standard-WSL2-x64; Node.js v14.16.1)\r\nx-elastic-product-origin: kibana\r\nx-elastic-client-meta: es=7.13.0p,js=14.16.1,t=7.13.0p,hc=14.16.1\r\ncontent-type: application/json\r\nconten"[truncated 1048076 bytes]; line: 1, column: 256]'}}, 'data': {'is_canceled': 0, 'lead_time': 118, 'arrival_date_year': 2015, 'arrival_date_month': 7, 'arrival_date_week_number': 27, 'arrival_date_day_of_month': 1, 'stays_in_weekend_nights': 4, 'stays_in_week_nights': 10, 'adults': 1, 'children': 0, 'babies': 0, 'meal': 'BB', 'country': nan, 'market_segment': 'Direct', 'distribution_channel': 'Direct', 'is_repeated_guest': 0, 'previous_cancellations': 0, 'previous_bookings_not_canceled': 0, 'reserved_room_type': 'A', 'assigned_room_type': 'A', 'booking_changes': 2, 'deposit_type': 'No Deposit', 'agent': 'No Agent', 'company': 'No Company', 'days_in_waiting_list': 0, 'customer_type': 'Transient', 'adr': 62.0, 'required_car_parking_spaces': 0, 'total_of_special_requests': 2, 'reservation_status': 'Check-Out', 'reservation_status_date': '2015-07-15', 'hotel_type': 'resort_hotel', 'record_number': 31, 'arrival_date': '2015-07-01', 'is_family': 0, 'total_stay_nights': 14, 'total_rate': 868.0, 'is_room_type_changed': 0, 'total_guests': 1}}}])
+[2025-04-14T07:32:59.883+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=M3_GA_pipeline, task_id=post_to_elasticsearch, execution_date=20250414T073208, start_date=20250414T073237, end_date=20250414T073259
+[2025-04-14T07:32:59.917+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 52 for task post_to_elasticsearch (('1 document(s) failed to index.', [{'index': {'_index': 'table_m3', '_type': '_doc', '_id': '9i83M5YBXIy04TvpOVfg', 'status': 400, 'error': {'type': 'mapper_parsing_exception', 'reason': 'failed to parse', 'caused_by': {'type': 'json_parse_exception', 'reason': 'Non-standard token \'NaN\': enable JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS to allow\n at [Source: (byte[])"DELETE /table_m3 HTTP/1.1\r\nHost: elasticsearch:9200\r\nAccept-Encoding: identity\r\nconnection: keep-alive\r\ncontent-type: application/json\r\nuser-agent: elasticsearch-py/7.13.4 (Python 3.7.13)\r\nx-elastic-client-meta: es=7.13.4,py=3.7.13,t=7.13.4,ur=1.26.11\r\n\r\n-agent: elasticsearch-js/7.13.0-canary.1 (linux 5.10.16.3-microsoft-standard-WSL2-x64; Node.js v14.16.1)\r\nx-elastic-product-origin: kibana\r\nx-elastic-client-meta: es=7.13.0p,js=14.16.1,t=7.13.0p,hc=14.16.1\r\ncontent-type: application/json\r\nconten"[truncated 1048076 bytes]; line: 1, column: 256]'}}, 'data': {'is_canceled': 0, 'lead_time': 118, 'arrival_date_year': 2015, 'arrival_date_month': 7, 'arrival_date_week_number': 27, 'arrival_date_day_of_month': 1, 'stays_in_weekend_nights': 4, 'stays_in_week_nights': 10, 'adults': 1, 'children': 0, 'babies': 0, 'meal': 'BB', 'country': nan, 'market_segment': 'Direct', 'distribution_channel': 'Direct', 'is_repeated_guest': 0, 'previous_cancellations': 0, 'previous_bookings_not_canceled': 0, 'reserved_room_type': 'A', 'assigned_room_type': 'A', 'booking_changes': 2, 'deposit_type': 'No Deposit', 'agent': 'No Agent', 'company': 'No Company', 'days_in_waiting_list': 0, 'customer_type': 'Transient', 'adr': 62.0, 'required_car_parking_spaces': 0, 'total_of_special_requests': 2, 'reservation_status': 'Check-Out', 'reservation_status_date': '2015-07-15', 'hotel_type': 'resort_hotel', 'record_number': 31, 'arrival_date': '2015-07-01', 'is_family': 0, 'total_stay_nights': 14, 'total_rate': 868.0, 'is_room_type_changed': 0, 'total_guests': 1}}}]); 1531)
+[2025-04-14T07:32:59.988+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-04-14T07:33:00.157+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

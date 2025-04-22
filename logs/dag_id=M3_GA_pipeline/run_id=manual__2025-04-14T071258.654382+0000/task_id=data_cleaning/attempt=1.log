@@ -1,0 +1,40 @@
+[2025-04-14T07:13:13.170+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-14T07:12:58.654382+00:00 [queued]>
+[2025-04-14T07:13:13.194+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-14T07:12:58.654382+00:00 [queued]>
+[2025-04-14T07:13:13.195+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T07:13:13.197+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-04-14T07:13:13.198+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T07:13:13.248+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): data_cleaning> on 2025-04-14 07:12:58.654382+00:00
+[2025-04-14T07:13:13.259+0000] {standard_task_runner.py:52} INFO - Started process 1169 to run task
+[2025-04-14T07:13:13.268+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'M3_GA_pipeline', 'data_cleaning', 'manual__2025-04-14T07:12:58.654382+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_galuh_alifani_DAG.py', '--cfg-path', '/tmp/tmpvbtwz2cq', '--error-file', '/tmp/tmpklay5mym']
+[2025-04-14T07:13:13.272+0000] {standard_task_runner.py:80} INFO - Job 43: Subtask data_cleaning
+[2025-04-14T07:13:13.548+0000] {task_command.py:371} INFO - Running <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-14T07:12:58.654382+00:00 [running]> on host b652548eb1f7
+[2025-04-14T07:13:13.814+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Galuh
+AIRFLOW_CTX_DAG_ID=M3_GA_pipeline
+AIRFLOW_CTX_TASK_ID=data_cleaning
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T07:12:58.654382+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T07:12:58.654382+00:00
+[2025-04-14T07:13:30.158+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/P2M3_galuh_alifani_DAG.py", line 123, in clean_data
+    df[col] = df[col].fillna(replacement)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 4822, in fillna
+    downcast=downcast,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 6313, in fillna
+    value, method = validate_fillna_kwargs(value, method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_validators.py", line 370, in validate_fillna_kwargs
+    raise ValueError("Must specify a fill 'value' or 'method'.")
+ValueError: Must specify a fill 'value' or 'method'.
+[2025-04-14T07:13:30.243+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=M3_GA_pipeline, task_id=data_cleaning, execution_date=20250414T071258, start_date=20250414T071313, end_date=20250414T071330
+[2025-04-14T07:13:30.338+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 43 for task data_cleaning (Must specify a fill 'value' or 'method'.; 1169)
+[2025-04-14T07:13:30.417+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-04-14T07:13:30.524+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

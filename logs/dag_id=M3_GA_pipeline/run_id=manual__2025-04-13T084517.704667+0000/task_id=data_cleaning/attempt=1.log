@@ -1,0 +1,24 @@
+[2025-04-13T08:45:40.857+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-13T08:45:17.704667+00:00 [queued]>
+[2025-04-13T08:45:40.892+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-13T08:45:17.704667+00:00 [queued]>
+[2025-04-13T08:45:40.892+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-13T08:45:40.896+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-04-13T08:45:40.897+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-13T08:45:40.943+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): data_cleaning> on 2025-04-13 08:45:17.704667+00:00
+[2025-04-13T08:45:40.956+0000] {standard_task_runner.py:52} INFO - Started process 1720 to run task
+[2025-04-13T08:45:40.962+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'M3_GA_pipeline', 'data_cleaning', 'manual__2025-04-13T08:45:17.704667+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_galuh_alifani_DAG.py', '--cfg-path', '/tmp/tmpqc2ht62l', '--error-file', '/tmp/tmp1mie_kl8']
+[2025-04-13T08:45:40.965+0000] {standard_task_runner.py:80} INFO - Job 27: Subtask data_cleaning
+[2025-04-13T08:45:41.685+0000] {task_command.py:371} INFO - Running <TaskInstance: M3_GA_pipeline.data_cleaning manual__2025-04-13T08:45:17.704667+00:00 [running]> on host a0a67293f3f1
+[2025-04-13T08:45:42.212+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Galuh
+AIRFLOW_CTX_DAG_ID=M3_GA_pipeline
+AIRFLOW_CTX_TASK_ID=data_cleaning
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-13T08:45:17.704667+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-13T08:45:17.704667+00:00
+[2025-04-13T08:46:09.816+0000] {logging_mixin.py:115} INFO - data has been cleaned
+[2025-04-13T08:46:10.063+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-04-13T08:46:10.301+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=M3_GA_pipeline, task_id=data_cleaning, execution_date=20250413T084517, start_date=20250413T084540, end_date=20250413T084610
+[2025-04-13T08:46:10.450+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-04-13T08:46:10.817+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
